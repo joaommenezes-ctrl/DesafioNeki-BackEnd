@@ -1,0 +1,12 @@
+package com.EventHub.Neki.repository;
+
+import com.EventHub.Neki.domain.Evento;
+import com.EventHub.Neki.domain.Admin;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+public interface EventoRepository extends JpaRepository<Evento, Long> {
+
+    List<Evento> findByAdmin(Admin admin);
+
+}
